@@ -1,0 +1,379 @@
+﻿@{
+    ViewData["Title"] = "Kontrol Paneli";
+}
+@model WebApplication24.Models.MessageModel
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+              
+        function sendButtonMessage(buttonValue) {
+            fetch('/Home/SendMessage', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'Message=' + encodeURIComponent(buttonValue)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Message sent:', data);
+                    // Burada gerekirse bir geri bildirim ekleyebilirsiniz
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+
+        let isEmergencyStop = false;
+
+        function toggleEmergencyStop() {
+            isEmergencyStop = !isEmergencyStop;
+            const button = document.getElementById('emergencyStopButton');
+            const message = isEmergencyStop ? 'emergency_stop_off' : 'emergency_stop_on';
+
+            sendButtonMessage(message);
+
+            // Buton metnini ve rengini güncelle
+            button.textContent = isEmergencyStop ? 'Acil Durumu Kaldır' : 'Acil Dur';
+            button.classList.toggle('btn-danger', !isEmergencyStop);
+            button.classList.toggle('btn-warning', isEmergencyStop);
+        }
+
+      
+        function updateBatteryStatus(voltage) {
+            let percentage;
+            if (voltage >= 12.9) {
+                percentage = 100;
+            } else if (voltage >= 12.7) {
+                percentage = 75 + (voltage - 12.7) / (12.9 - 12.7) * 25;
+            } else if (voltage >= 12.5) {
+                percentage = 75 + (voltage - 12.5) / (12.7 - 12.5) * 25;
+            } else if (voltage >= 12.3) {
+                percentage = 75 + (voltage - 12.3) / (12.5 - 12.3) * 25;
+            } else if (voltage >= 12.0) {
+                percentage = 75 + (voltage - 11.8) / (12.3 - 12.0) * 25;
+            } else {
+                percentage = 0;
+            }
+
+            percentage = Math.round(percentage * 10) / 10;
+            document.getElementById('battery-status').textContent = percentage;
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #mapCanvas {
+            border: 1px solid #000000;
+        }
+
+        
+        #mapImage {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+    
+
+        .gif {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>ROS2 MVC App</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2  vh-100 position-fixed">
+                <div class="sidebar pt-5">
+                    <a href="#section1" style="margin-top:10px">
+                        <span style="font-weight:bold; font-style:italic;  ">Sol Engel:</span>
+                        <span id="left_distance">@Html.DisplayFor(model => model.left_distance)</span>
+                    </a>
+                    <br />
+                    <a href="#section2">
+                        <span style="font-weight:bold; font-style:italic; ">Sağ Engel:</span>
+                        <span id="right_distance">@Html.DisplayFor(model => model.right_distance)</span>
+                    </a>
+                    <br />
+                    <a href="#section3">
+                        <span style="font-weight:bold; font-style:italic;  ">Sıcaklık 1:</span>
+                        <span id="first_temperature">@Html.DisplayFor(model => model.first_temperature)</span>
+                    </a>
+                    <br />
+                    <a href="#section4">
+                        <span style="font-weight:bold; font-style:italic;  ">Sıcaklık 2:</span>
+                        <span id="second_temperature">@Html.DisplayFor(model => model.second_temperature)</span>
+                    </a>
+                    <br />
+                    <a href="#section5">
+                        <span style="font-weight:bold; font-style:italic;  ">QR Kod:</span>
+                        <span id="qr_code">@Html.DisplayFor(model => model.qr_code)</span>
+                    </a>
+                    <br />
+                    <a href="#section6 ">
+                        <span style="font-weight:bold; font-style:italic;  ">Akım:</span>
+                        <span id="current">@Html.DisplayFor(model => model.current)</span>
+                    </a>
+                    <br />
+                    <a href="#section7">
+                        <span style="font-weight:bold; font-style:italic;  ">Voltaj:</span>
+                        <span id="voltage">@Html.DisplayFor(model => model.voltage)</span>
+                        <div id="battery-status"></div>
+                    </a>
+
+                    <div class="mb-4 d-flex" style="margin-top:10px">
+                        <button type="button" class="btn btn-success" onclick="sendButtonMessage('start_button')" style="margin-right:10px; margin-left:30px">
+                            Başlat
+                        </button>
+                        <span id="start_button_state" class="mr-2">@Html.DisplayFor(model => model.start_button_state)</span>
+
+                        <button type="button" class="btn btn-danger ml-3" onclick="sendButtonMessage('close_button')">
+                            Kapat
+                        </button>
+                        <span id="close_button_state" class="ml-2">@Html.DisplayFor(model => model.close_button_state)</span>
+                    </div>
+                    <!-- Diğer sidebar bağlantıları -->
+                </div>
+            </div>
+
+            <!-- İçerik -->
+            <div class="col-md-10 offset-md-2">
+                <!-- Üstteki 4 kart -->
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <div class="card-title">SÜRE:</div>
+                                <h3 id="elapsedTime">00:00:00</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-body " style="height:100px">
+
+                                <button type="button" style="width:100%; height:100%"  class="btn btn-success" >Şarj İstasyonuna Git</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="card text-white bg-danger mb-3">
+                            <div class="card-body " style="height:100px">
+                               
+                                <button type="button" style="width:100%; height:100%" id="emergencyStopButton" class="btn btn-danger" onclick="toggleEmergencyStop()">Acil Dur</button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <!-- Ortadaki 2 kart -->
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12" >
+                        <div class="card text-white bg-warning mb-3" style="height:430px">
+                            <div class="card-body">
+                                <div class="card-title" style="font-weight:bold; font-size:20px">Harita Seçimi</div>
+                                <button type="button" style="width:100px; height:50px;   margin-bottom:5px" class="btn btn-success" onclick="sendButtonMessage('senaryo1')">
+                                    1.Senaryo
+                                </button>
+                                <span id="senaryo1" class="mr-2">@Html.DisplayFor(model => model.senaryo1)</span>
+
+                                <button type="button" style="width:100px; height:50px;  margin-bottom:5px" class="btn btn-success" onclick="sendButtonMessage('senaryo2')">
+                                    2.Senaryo
+                                </button>
+                                <span id="senaryo2" class="mr-2">@Html.DisplayFor(model => model.senaryo2)</span>
+
+                                <button type="button" style="width:100px; height:50px; " class="btn btn-success" onclick="sendButtonMessage('senaryo3')">
+                                    3.Senaryo
+                                </button>
+                                <span id="senaryo3" class="mr-2">@Html.DisplayFor(model => model.senaryo3)</span>
+                                <button type="button" style="width:100px; height:50px; " class="btn btn-success" onclick="sendButtonMessage('senaryo4')">
+                                    4.Senaryo
+                                </button>
+                                <span id="senaryo4" class="mr-2">@Html.DisplayFor(model => model.senaryo4)</span>
+
+                                <div class="card-title" style="font-weight:bold; font-size:20px; margin-top:10px">Senaryo Seçimi</div>
+
+
+                                <button type="button" style="width:100px; height:50px;  margin-bottom:5px"  class="btn btn-success" onclick="sendButtonMessage('senaryo5')">
+                                    5.Senaryo 
+                                </button>
+                                <span id="senaryo5" class="mr-2">@Html.DisplayFor(model => model.senaryo5)</span>
+                   
+                                <button type="button" style="width:100px; height:50px;   margin-bottom:5px"  class="btn btn-success" onclick="sendButtonMessage('senaryo6')">
+                                    6.Senaryo
+                                </button>
+                                <span id="senaryo6" class="mr-2">@Html.DisplayFor(model => model.senaryo6)</span>
+                                <button type="button" style="width:100px; height:50px; " class="btn btn-success" onclick="sendButtonMessage('senaryo7')">
+                                    7.Senaryo
+                                </button>
+                                <span id="senaryo7" class="mr-2">@Html.DisplayFor(model => model.senaryo7)</span>
+                                <button type="button" style="width:100px; height:50px; "  class="btn btn-success" onclick="sendButtonMessage('senaryo8')">
+                                    8.Senaryo
+                                </button>
+                                <span id="senaryo8" class="mr-2">@Html.DisplayFor(model => model.senaryo8)</span>
+                                <div id="secilen-haritalandirma"></div>
+
+
+
+
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="col-lg-9 col-sm-12">
+                        <div class="card text-white bg-secondary mb-3">
+                            <div class="card-body">
+                                
+                                <img id="mapImage" width="370" height="400" src="~/image/map.png" alt="ROS2 Map" />
+                               <span id="receivedMessages">@Html.DisplayFor(model => model.ReceivedMessage)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                @*  <form asp-action="DrawRedDotOnMap" method="post">
+                    <div>
+                        <label>X Koordinatı:</label>
+                        <input type="number" id="xCoord" name="x" asp-for="qr_code" required />
+                    </div>
+                    <div>
+                        <label>Y Koordinatı:</label>
+                        <input type="number"itemid="yCoord" name="y" asp-for="qr_code" required />
+                    </div>
+                    <div>
+                        <button type="submit">Nokta Çiz</button>
+                    </div>
+                </form>
+
+                @if (Model != null && !string.IsNullOrEmpty(Model.ImagePath))
+                {
+                    <h3>Sonuç:</h3>
+                    <img src="@Model.ImagePath" alt="Harita Üzerinde Nokta" />
+                }  *@
+
+
+             
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('/Home/GetSensorData');
+                const data = await response.json();
+
+                // const qrData = data.qr_code.split(';');
+                // const x = parseInt(qrData[1]);
+                // const y = parseInt(qrData[2]);
+
+                // await fetch('/Home/DrawRedDotOnMap', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/x-www-form-urlencoded',
+                //     },
+                //     body: 'x=' + x + '&y=' + y
+                // });
+
+                // document.getElementById('xCoord').textContent = x;
+                // document.getElementById('yCoord').textContent = y;
+                document.getElementById('receivedMessages').textContent = data.ReceivedMessage;
+                document.getElementById('close_button_state').textContent = data.close_button_state;
+                document.getElementById('start_button_state').textContent = data.start_button_state;
+                document.getElementById('left_distance').textContent = data.left_distance;
+                document.getElementById('right_distance').textContent = data.right_distance;
+                document.getElementById('first_temperature').textContent = data.first_temperature;
+                document.getElementById('second_temperature').textContent = data.second_temperature;
+                document.getElementById('qr_code').textContent = data.qr_code;
+                document.getElementById('current').textContent = data.current;
+                document.getElementById('voltage').textContent = data.voltage;
+                updateBatteryStatus(parseFloat(data.voltage));
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // İlk veri çekme ve güncelleme
+            fetchAndUpdateQRData();
+
+            // Her 5 saniyede bir veriyi güncelle
+            setInterval(fetchAndUpdateQRData, 1000);
+
+            // Manuel kaydetme butonu için event listener
+            document.getElementById('saveButton').addEventListener('click', () => {
+                const x = document.getElementById('xInput').value;
+                const y = document.getElementById('yInput').value;
+                saveData(x, y);
+            });
+        });
+
+        fetchData();
+        setInterval(fetchData, 1000);
+    </script>
+    
+    <script>
+        // Zamanı hesaplamak için başlangıç zamanı
+        let startTime = new Date();
+
+        // Geçen süreyi güncelleyen fonksiyon
+        function updateElapsedTime(display) {
+            setInterval(function () {
+                let currentTime = new Date();
+                let elapsedTime = new Date(currentTime - startTime);
+
+                // Saat, dakika ve saniyeleri al
+                let hours = elapsedTime.getUTCHours();
+                let minutes = elapsedTime.getUTCMinutes();
+                let seconds = elapsedTime.getUTCSeconds();
+
+                // Saat, dakika ve saniyeleri iki haneli olarak ayarla
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                // Ekranda göster
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+            }, 1000);
+        }
+
+        // Sayfa yüklendiğinde sayacı başlat
+        window.onload = function () {
+            const display = document.querySelector('#elapsedTime');
+            updateElapsedTime(display);
+        };
+
+    </script>
+    <script>
+        function updateImage() {
+            var img = document.getElementById('mapImage');
+            if (img) {
+                // Resmin src özelliğine yeni bir zaman damgası ekleyerek tarayıcıyı yeni bir resim yüklemeye zorluyoruz
+                img.src = '/image/map.png?' + new Date().getTime();
+            }
+        }
+
+        // Her 1 saniyede bir resmi güncelle
+        setInterval(updateImage, 1000);
+
+        // Sayfa yüklendiğinde ilk güncellemeyi yap
+        document.addEventListener('DOMContentLoaded', updateImage);
+
+       
+    </script>
+    
+    
+       
+
+</body>
+</html>
