@@ -21,7 +21,7 @@ class GM65Node(Node):
 
         self.previous_barcode_data = ""
 
-    def read_barcode(self):
+    def read_barcode(self):# İlk deneme için
         try:
             if self.ser.in_waiting > 0:
                 barcode_data = self.ser.readline().decode('utf-8').strip()
