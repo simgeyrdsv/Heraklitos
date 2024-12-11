@@ -1,0 +1,567 @@
+[0.000000] (-) TimerEvent: {}
+[0.000521] (agv_interfaces) JobQueued: {'identifier': 'agv_interfaces', 'dependencies': OrderedDict()}
+[0.001277] (agv_py) JobQueued: {'identifier': 'agv_py', 'dependencies': OrderedDict()}
+[0.001710] (agv_cpp) JobQueued: {'identifier': 'agv_cpp', 'dependencies': OrderedDict([('agv_interfaces', '/home/melih/Desktop/AGV/install/agv_interfaces')])}
+[0.002301] (agv_launch) JobQueued: {'identifier': 'agv_launch', 'dependencies': OrderedDict([('agv_interfaces', '/home/melih/Desktop/AGV/install/agv_interfaces'), ('agv_py', '/home/melih/Desktop/AGV/install/agv_py'), ('agv_cpp', '/home/melih/Desktop/AGV/install/agv_cpp')])}
+[0.002486] (agv_interfaces) JobStarted: {'identifier': 'agv_interfaces'}
+[0.023951] (agv_py) JobStarted: {'identifier': 'agv_py'}
+[0.060713] (agv_interfaces) JobProgress: {'identifier': 'agv_interfaces', 'progress': 'cmake'}
+[0.065290] (agv_interfaces) JobProgress: {'identifier': 'agv_interfaces', 'progress': 'build'}
+[0.065529] (agv_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/melih/Desktop/AGV/build/agv_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/melih/Desktop/AGV/build/agv_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'melih'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces/lib:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/lib:/home/melih/Desktop/ros_action/install/robot_action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/melih'), ('OLDPWD', '/home/melih/Desktop/AGV/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1246'), ('SYSTEMD_EXEC_PID', '1413'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2725'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/melih/Desktop/New_Folder_1/install:/home/melih/Desktop/ros_lifecycle_node/install:/home/melih/Desktop/ros_example/turtlesim_project/install:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install:/home/melih/Desktop/ros_example/battery_led_states/install:/home/melih/Desktop/ros_msgs/install:/home/melih/Desktop/ros_cpp2/install:/home/melih/Desktop/ros_py/install:/home/melih/Desktop/AGV/install:/home/melih/Desktop/ros_ws/install:/home/melih/Desktop/ros_action/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'melih'), ('JOURNAL_STREAM', '8:13365'), ('_', '/home/melih/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'melih'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/melih/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/melih-ideapad:@/tmp/.ICE-unix/1386,unix/melih-ideapad:/tmp/.ICE-unix/1386'), ('INVOCATION_ID', '96760d6e75ce4e6d8b51c10b866c4b1c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.612QT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:3d477764-d962-41e1-a97e-6536cf39f878'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/melih/Desktop/AGV/build/agv_interfaces'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/battery_led_states/install/package_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_py/install/my_robot/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/actions_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/robot_action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/opt/ros/humble')]), 'shell': False}
+[0.099551] (-) TimerEvent: {}
+[0.226195] (-) TimerEvent: {}
+[0.249775] (agv_interfaces) StdoutLine: {'line': b'[ 10%] Built target agv_interfaces__rosidl_generator_c\n'}
+[0.328891] (-) TimerEvent: {}
+[0.331889] (agv_interfaces) StdoutLine: {'line': b'[ 10%] Built target ament_cmake_python_copy_agv_interfaces\n'}
+[0.332292] (agv_interfaces) StdoutLine: {'line': b'[ 12%] Built target agv_interfaces__cpp\n'}
+[0.380908] (agv_interfaces) StdoutLine: {'line': b'[ 23%] Built target agv_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.416928] (agv_interfaces) StdoutLine: {'line': b'[ 33%] Built target agv_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.430910] (-) TimerEvent: {}
+[0.490958] (agv_interfaces) StdoutLine: {'line': b'[ 43%] Built target agv_interfaces__rosidl_typesupport_c\n'}
+[0.530996] (agv_interfaces) StdoutLine: {'line': b'[ 53%] Built target agv_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.531391] (-) TimerEvent: {}
+[0.568980] (agv_interfaces) StdoutLine: {'line': b'[ 64%] Built target agv_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.633938] (-) TimerEvent: {}
+[0.645089] (agv_interfaces) StdoutLine: {'line': b'[ 74%] Built target agv_interfaces__rosidl_typesupport_cpp\n'}
+[0.734058] (-) TimerEvent: {}
+[0.759594] (agv_interfaces) StdoutLine: {'line': b'[ 74%] Built target agv_interfaces\n'}
+[0.819886] (agv_interfaces) StdoutLine: {'line': b'[ 76%] Built target agv_interfaces__py\n'}
+[0.834180] (-) TimerEvent: {}
+[0.904696] (agv_interfaces) StdoutLine: {'line': b'[ 84%] Built target agv_interfaces__rosidl_generator_py\n'}
+[0.944968] (-) TimerEvent: {}
+[0.997094] (agv_interfaces) StdoutLine: {'line': b'[ 89%] Built target agv_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.020911] (agv_interfaces) StdoutLine: {'line': b'[ 94%] Built target agv_interfaces__rosidl_typesupport_c__pyext\n'}
+[1.032994] (agv_interfaces) StdoutLine: {'line': b'[100%] Built target agv_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.045095] (-) TimerEvent: {}
+[1.150955] (-) TimerEvent: {}
+[1.251437] (-) TimerEvent: {}
+[1.351977] (-) TimerEvent: {}
+[1.452577] (-) TimerEvent: {}
+[1.492179] (agv_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.494638] (agv_interfaces) StdoutLine: {'line': b'writing agv_interfaces.egg-info/PKG-INFO\n'}
+[1.495227] (agv_interfaces) StdoutLine: {'line': b'writing dependency_links to agv_interfaces.egg-info/dependency_links.txt\n'}
+[1.495861] (agv_interfaces) StdoutLine: {'line': b'writing top-level names to agv_interfaces.egg-info/top_level.txt\n'}
+[1.501614] (agv_interfaces) StdoutLine: {'line': b"reading manifest file 'agv_interfaces.egg-info/SOURCES.txt'\n"}
+[1.502939] (agv_interfaces) StdoutLine: {'line': b"writing manifest file 'agv_interfaces.egg-info/SOURCES.txt'\n"}
+[1.554079] (-) TimerEvent: {}
+[1.583024] (agv_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_agv_interfaces_egg\n'}
+[1.629092] (agv_interfaces) CommandEnded: {'returncode': 0}
+[1.656116] (-) TimerEvent: {}
+[1.756663] (-) TimerEvent: {}
+[1.824492] (agv_interfaces) JobProgress: {'identifier': 'agv_interfaces', 'progress': 'install'}
+[1.840175] (agv_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/melih/Desktop/AGV/build/agv_interfaces'], 'cwd': '/home/melih/Desktop/AGV/build/agv_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'melih'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces/lib:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/lib:/home/melih/Desktop/ros_action/install/robot_action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/melih'), ('OLDPWD', '/home/melih/Desktop/AGV/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1246'), ('SYSTEMD_EXEC_PID', '1413'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2725'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/melih/Desktop/New_Folder_1/install:/home/melih/Desktop/ros_lifecycle_node/install:/home/melih/Desktop/ros_example/turtlesim_project/install:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install:/home/melih/Desktop/ros_example/battery_led_states/install:/home/melih/Desktop/ros_msgs/install:/home/melih/Desktop/ros_cpp2/install:/home/melih/Desktop/ros_py/install:/home/melih/Desktop/AGV/install:/home/melih/Desktop/ros_ws/install:/home/melih/Desktop/ros_action/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'melih'), ('JOURNAL_STREAM', '8:13365'), ('_', '/home/melih/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'melih'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/melih/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/melih-ideapad:@/tmp/.ICE-unix/1386,unix/melih-ideapad:/tmp/.ICE-unix/1386'), ('INVOCATION_ID', '96760d6e75ce4e6d8b51c10b866c4b1c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.612QT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:3d477764-d962-41e1-a97e-6536cf39f878'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/melih/Desktop/AGV/build/agv_interfaces'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/battery_led_states/install/package_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_py/install/my_robot/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/actions_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/robot_action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/opt/ros/humble')]), 'shell': False}
+[1.857943] (-) TimerEvent: {}
+[1.860231] (agv_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.864071] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/ament_index/resource_index/rosidl_interfaces/agv_interfaces\n'}
+[1.864449] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces\n'}
+[1.864712] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv\n'}
+[1.865003] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/command.h\n'}
+[1.865258] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail\n'}
+[1.865504] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__functions.h\n'}
+[1.865771] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__type_support.h\n'}
+[1.866048] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__functions.h\n'}
+[1.866300] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__functions.c\n'}
+[1.866514] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__functions.c\n'}
+[1.866717] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__struct.h\n'}
+[1.872651] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__struct.h\n'}
+[1.873019] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__type_support.h\n'}
+[1.873290] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/learn_weight.h\n'}
+[1.873551] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg\n'}
+[1.874118] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.874373] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/library_path.sh\n'}
+[1.874607] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/library_path.dsv\n'}
+[1.876032] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_generator_c.so\n'}
+[1.876453] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces\n'}
+[1.876699] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv\n'}
+[1.876958] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail\n'}
+[1.877187] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__rosidl_typesupport_fastrtps_c.h\n'}
+[1.877455] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__rosidl_typesupport_fastrtps_c.h\n'}
+[1.877683] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg\n'}
+[1.877951] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.878193] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[1.878416] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces\n'}
+[1.878639] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv\n'}
+[1.879762] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail\n'}
+[1.880166] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__rosidl_typesupport_introspection_c.h\n'}
+[1.880413] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__type_support.c\n'}
+[1.880646] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__type_support.c\n'}
+[1.880904] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__rosidl_typesupport_introspection_c.h\n'}
+[1.881139] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg\n'}
+[1.881350] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.881593] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[1.881863] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_typesupport_c.so\n'}
+[1.882140] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces\n'}
+[1.882377] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv\n'}
+[1.882607] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/learn_weight.hpp\n'}
+[1.882921] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail\n'}
+[1.883171] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__struct.hpp\n'}
+[1.883682] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__traits.hpp\n'}
+[1.884372] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__struct.hpp\n'}
+[1.884636] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__traits.hpp\n'}
+[1.884888] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__builder.hpp\n'}
+[1.885130] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__builder.hpp\n'}
+[1.885352] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/command.hpp\n'}
+[1.885573] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces\n'}
+[1.885794] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv\n'}
+[1.886050] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail\n'}
+[1.886283] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/dds_fastrtps\n'}
+[1.886506] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.886727] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.887011] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg\n'}
+[1.887282] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.887507] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.887778] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces\n'}
+[1.888217] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv\n'}
+[1.888482] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail\n'}
+[1.888745] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.889013] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.889231] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/command__type_support.cpp\n'}
+[1.889426] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/include/agv_interfaces/agv_interfaces/srv/detail/learn_weight__type_support.cpp\n'}
+[1.889619] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[1.889851] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_typesupport_cpp.so\n'}
+[1.890072] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/pythonpath.sh\n'}
+[1.890280] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/pythonpath.dsv\n'}
+[1.890477] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces-0.0.0-py3.10.egg-info\n'}
+[1.890669] (agv_interfaces) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[1.890932] (agv_interfaces) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.891158] (agv_interfaces) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.891348] (agv_interfaces) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[1.891533] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces\n'}
+[1.891717] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/__init__.py\n'}
+[1.891935] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/libagv_interfaces__rosidl_generator_py.so\n'}
+[1.892160] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/agv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.892376] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/_agv_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[1.892591] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/agv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.892835] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/srv\n'}
+[1.893104] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/srv/__init__.py\n'}
+[1.893316] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/srv/_command.py\n'}
+[1.893537] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/srv/_learn_weight.py\n'}
+[1.893758] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/srv/_command_s.c\n'}
+[1.894015] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/srv/_learn_weight_s.c\n'}
+[1.894284] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/_agv_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.894729] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/_agv_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.895041] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/agv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.958089] (-) TimerEvent: {}
+[2.013091] (agv_interfaces) StdoutLine: {'line': b"Listing '/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces'...\n"}
+[2.013493] (agv_interfaces) StdoutLine: {'line': b"Listing '/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/srv'...\n"}
+[2.027840] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/agv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.031191] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/agv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.032311] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages/agv_interfaces/agv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.034314] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/lib/libagv_interfaces__rosidl_generator_py.so\n'}
+[2.034656] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/LearnWeight.idl\n'}
+[2.034954] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/Command.idl\n'}
+[2.035211] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/LearnWeight.srv\n'}
+[2.035451] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/LearnWeight_Request.msg\n'}
+[2.035666] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/LearnWeight_Response.msg\n'}
+[2.040200] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/Command.srv\n'}
+[2.042354] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/Command_Request.msg\n'}
+[2.042656] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/srv/Command_Response.msg\n'}
+[2.043036] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/ament_index/resource_index/package_run_dependencies/agv_interfaces\n'}
+[2.043290] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/ament_index/resource_index/parent_prefix_path/agv_interfaces\n'}
+[2.043530] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/ament_prefix_path.sh\n'}
+[2.043766] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.044048] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/path.sh\n'}
+[2.044328] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/environment/path.dsv\n'}
+[2.044561] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/local_setup.bash\n'}
+[2.044788] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/local_setup.sh\n'}
+[2.046294] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/local_setup.zsh\n'}
+[2.047214] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/local_setup.dsv\n'}
+[2.047837] (agv_interfaces) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/package.dsv\n'}
+[2.048135] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/ament_index/resource_index/packages/agv_interfaces\n'}
+[2.048399] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_generator_cExport.cmake\n'}
+[2.048650] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.048927] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.049192] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.049477] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.049744] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.050029] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[2.050286] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.050531] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_generator_cppExport.cmake\n'}
+[2.050899] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.051257] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.051518] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.051761] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.052113] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[2.052408] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.056382] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_generator_pyExport.cmake\n'}
+[2.056645] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/export_agv_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.056924] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.057174] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.057425] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.057658] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.057915] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.058145] (-) TimerEvent: {}
+[2.058407] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.058670] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.058927] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfacesConfig.cmake\n'}
+[2.059191] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/cmake/agv_interfacesConfig-version.cmake\n'}
+[2.059424] (agv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_interfaces/share/agv_interfaces/package.xml\n'}
+[2.059653] (agv_interfaces) CommandEnded: {'returncode': 0}
+[2.160292] (-) TimerEvent: {}
+[2.260946] (-) TimerEvent: {}
+[2.296879] (agv_interfaces) JobEnded: {'identifier': 'agv_interfaces', 'rc': 0}
+[2.298686] (agv_cpp) JobStarted: {'identifier': 'agv_cpp'}
+[2.332115] (agv_cpp) JobProgress: {'identifier': 'agv_cpp', 'progress': 'cmake'}
+[2.333737] (agv_cpp) JobProgress: {'identifier': 'agv_cpp', 'progress': 'build'}
+[2.334311] (agv_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/melih/Desktop/AGV/build/agv_cpp', '--', '-j4', '-l4'], 'cwd': '/home/melih/Desktop/AGV/build/agv_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'melih'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces/lib:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/lib:/home/melih/Desktop/ros_action/install/robot_action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/melih'), ('OLDPWD', '/home/melih/Desktop/AGV/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1246'), ('SYSTEMD_EXEC_PID', '1413'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2725'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/melih/Desktop/New_Folder_1/install:/home/melih/Desktop/ros_lifecycle_node/install:/home/melih/Desktop/ros_example/turtlesim_project/install:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install:/home/melih/Desktop/ros_example/battery_led_states/install:/home/melih/Desktop/ros_msgs/install:/home/melih/Desktop/ros_cpp2/install:/home/melih/Desktop/ros_py/install:/home/melih/Desktop/AGV/install:/home/melih/Desktop/ros_ws/install:/home/melih/Desktop/ros_action/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'melih'), ('JOURNAL_STREAM', '8:13365'), ('_', '/home/melih/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'melih'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/melih/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/melih-ideapad:@/tmp/.ICE-unix/1386,unix/melih-ideapad:/tmp/.ICE-unix/1386'), ('INVOCATION_ID', '96760d6e75ce4e6d8b51c10b866c4b1c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.612QT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:3d477764-d962-41e1-a97e-6536cf39f878'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/melih/Desktop/AGV/build/agv_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/battery_led_states/install/package_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_py/install/my_robot/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/actions_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/robot_action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/opt/ros/humble')]), 'shell': False}
+[2.361066] (-) TimerEvent: {}
+[2.441054] (agv_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target main_node\x1b[0m\n'}
+[2.461212] (-) TimerEvent: {}
+[2.486831] (agv_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/main_node.dir/src/main_node.cpp.o\x1b[0m\n'}
+[2.561353] (-) TimerEvent: {}
+[2.647684] (agv_py) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/agv_py', 'build', '--build-base', '/home/melih/Desktop/AGV/build/agv_py/build', 'install', '--record', '/home/melih/Desktop/AGV/build/agv_py/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/melih/Desktop/AGV/src/agv_py', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'melih', 'LC_TIME': 'tr_TR.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/melih/Desktop/AGV/install/agv_interfaces/lib:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/lib:/home/melih/Desktop/ros_action/install/robot_action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/melih', 'OLDPWD': '/home/melih/Desktop/AGV/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'tr_TR.UTF-8', 'MANAGERPID': '1246', 'SYSTEMD_EXEC_PID': '1413', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2725', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/melih/Desktop/New_Folder_1/install:/home/melih/Desktop/ros_lifecycle_node/install:/home/melih/Desktop/ros_example/turtlesim_project/install:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install:/home/melih/Desktop/ros_example/battery_led_states/install:/home/melih/Desktop/ros_msgs/install:/home/melih/Desktop/ros_cpp2/install:/home/melih/Desktop/ros_py/install:/home/melih/Desktop/AGV/install:/home/melih/Desktop/ros_ws/install:/home/melih/Desktop/ros_action/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'melih', 'JOURNAL_STREAM': '8:13365', '_': '/home/melih/.local/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'melih', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/melih/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/melih-ideapad:@/tmp/.ICE-unix/1386,unix/melih-ideapad:/tmp/.ICE-unix/1386', 'INVOCATION_ID': '96760d6e75ce4e6d8b51c10b866c4b1c', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'tr_TR.UTF-8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'LC_TELEPHONE': 'tr_TR.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.612QT2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'tr_TR.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:3d477764-d962-41e1-a97e-6536cf39f878', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'tr_TR.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'tr_TR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/melih/Desktop/AGV/build/agv_py', 'TURTLEBOT3_MODEL': 'waffle', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/melih/Desktop/AGV/build/agv_py/prefix_override:/home/melih/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/battery_led_states/install/package_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_py/install/my_robot/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/actions_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/robot_action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'tr_TR.UTF-8', 'LC_PAPER': 'tr_TR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces'}, 'shell': False}
+[2.661466] (-) TimerEvent: {}
+[2.761901] (-) TimerEvent: {}
+[2.862390] (-) TimerEvent: {}
+[2.962861] (-) TimerEvent: {}
+[3.063341] (-) TimerEvent: {}
+[3.163813] (-) TimerEvent: {}
+[3.175046] (agv_py) StdoutLine: {'line': b'running egg_info\n'}
+[3.176732] (agv_py) StdoutLine: {'line': b'writing ../../build/agv_py/agv_py.egg-info/PKG-INFO\n'}
+[3.177284] (agv_py) StdoutLine: {'line': b'writing dependency_links to ../../build/agv_py/agv_py.egg-info/dependency_links.txt\n'}
+[3.177869] (agv_py) StdoutLine: {'line': b'writing entry points to ../../build/agv_py/agv_py.egg-info/entry_points.txt\n'}
+[3.178301] (agv_py) StdoutLine: {'line': b'writing requirements to ../../build/agv_py/agv_py.egg-info/requires.txt\n'}
+[3.178729] (agv_py) StdoutLine: {'line': b'writing top-level names to ../../build/agv_py/agv_py.egg-info/top_level.txt\n'}
+[3.182216] (agv_py) StdoutLine: {'line': b"reading manifest file '../../build/agv_py/agv_py.egg-info/SOURCES.txt'\n"}
+[3.184735] (agv_py) StdoutLine: {'line': b"writing manifest file '../../build/agv_py/agv_py.egg-info/SOURCES.txt'\n"}
+[3.185267] (agv_py) StdoutLine: {'line': b'running build\n'}
+[3.185530] (agv_py) StdoutLine: {'line': b'running build_py\n'}
+[3.186553] (agv_py) StdoutLine: {'line': b'running install\n'}
+[3.187206] (agv_py) StdoutLine: {'line': b'running install_lib\n'}
+[3.191796] (agv_py) StdoutLine: {'line': b'running install_data\n'}
+[3.192438] (agv_py) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.196401] (agv_py) StdoutLine: {'line': b"removing '/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages/agv_py-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[3.197234] (agv_py) StdoutLine: {'line': b'Copying ../../build/agv_py/agv_py.egg-info to /home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages/agv_py-0.0.0-py3.10.egg-info\n'}
+[3.200336] (agv_py) StdoutLine: {'line': b'running install_scripts\n'}
+[3.242330] (agv_py) StdoutLine: {'line': b'Installing deneyap_motor_controller script to /home/melih/Desktop/AGV/install/agv_py/lib/agv_py\n'}
+[3.243181] (agv_py) StdoutLine: {'line': b'Installing deneyap_sensor_controller script to /home/melih/Desktop/AGV/install/agv_py/lib/agv_py\n'}
+[3.244850] (agv_py) StdoutLine: {'line': b'Installing interface script to /home/melih/Desktop/AGV/install/agv_py/lib/agv_py\n'}
+[3.245186] (agv_py) StdoutLine: {'line': b'Installing lidar_web_example script to /home/melih/Desktop/AGV/install/agv_py/lib/agv_py\n'}
+[3.246700] (agv_py) StdoutLine: {'line': b'Installing qrcode script to /home/melih/Desktop/AGV/install/agv_py/lib/agv_py\n'}
+[3.247067] (agv_py) StdoutLine: {'line': b'Installing web_interface script to /home/melih/Desktop/AGV/install/agv_py/lib/agv_py\n'}
+[3.247352] (agv_py) StdoutLine: {'line': b"writing list of installed files to '/home/melih/Desktop/AGV/build/agv_py/install.log'\n"}
+[3.263931] (-) TimerEvent: {}
+[3.314601] (agv_py) CommandEnded: {'returncode': 0}
+[3.332268] (agv_py) JobEnded: {'identifier': 'agv_py', 'rc': 0}
+[3.364059] (-) TimerEvent: {}
+[3.464523] (-) TimerEvent: {}
+[3.565023] (-) TimerEvent: {}
+[3.665499] (-) TimerEvent: {}
+[3.766023] (-) TimerEvent: {}
+[3.866505] (-) TimerEvent: {}
+[3.966984] (-) TimerEvent: {}
+[4.067476] (-) TimerEvent: {}
+[4.167985] (-) TimerEvent: {}
+[4.268517] (-) TimerEvent: {}
+[4.369059] (-) TimerEvent: {}
+[4.469571] (-) TimerEvent: {}
+[4.570059] (-) TimerEvent: {}
+[4.670460] (-) TimerEvent: {}
+[4.770887] (-) TimerEvent: {}
+[4.871274] (-) TimerEvent: {}
+[4.971721] (-) TimerEvent: {}
+[5.072177] (-) TimerEvent: {}
+[5.172561] (-) TimerEvent: {}
+[5.273044] (-) TimerEvent: {}
+[5.373454] (-) TimerEvent: {}
+[5.473875] (-) TimerEvent: {}
+[5.574297] (-) TimerEvent: {}
+[5.674743] (-) TimerEvent: {}
+[5.775180] (-) TimerEvent: {}
+[5.875606] (-) TimerEvent: {}
+[5.976031] (-) TimerEvent: {}
+[6.076448] (-) TimerEvent: {}
+[6.176894] (-) TimerEvent: {}
+[6.277308] (-) TimerEvent: {}
+[6.377746] (-) TimerEvent: {}
+[6.478193] (-) TimerEvent: {}
+[6.578618] (-) TimerEvent: {}
+[6.679032] (-) TimerEvent: {}
+[6.779445] (-) TimerEvent: {}
+[6.879881] (-) TimerEvent: {}
+[6.980269] (-) TimerEvent: {}
+[7.080690] (-) TimerEvent: {}
+[7.181209] (-) TimerEvent: {}
+[7.281581] (-) TimerEvent: {}
+[7.382007] (-) TimerEvent: {}
+[7.482421] (-) TimerEvent: {}
+[7.582946] (-) TimerEvent: {}
+[7.683364] (-) TimerEvent: {}
+[7.709062] (agv_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/melih/Desktop/AGV/src/agv_cpp/src/main_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainNode::yuk_alma()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.709442] (agv_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/melih/Desktop/AGV/src/agv_cpp/src/main_node.cpp:1651:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Khhh\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.709641] (agv_cpp) StderrLine: {'line': b' 1651 |         float \x1b[01;35m\x1b[Khhh\x1b[m\x1b[K = send_weight_request();\n'}
+[7.709839] (agv_cpp) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[7.783505] (-) TimerEvent: {}
+[7.883914] (-) TimerEvent: {}
+[7.984371] (-) TimerEvent: {}
+[8.084826] (-) TimerEvent: {}
+[8.185235] (-) TimerEvent: {}
+[8.285626] (-) TimerEvent: {}
+[8.386022] (-) TimerEvent: {}
+[8.486397] (-) TimerEvent: {}
+[8.587744] (-) TimerEvent: {}
+[8.689961] (-) TimerEvent: {}
+[8.790453] (-) TimerEvent: {}
+[8.894426] (-) TimerEvent: {}
+[8.994904] (-) TimerEvent: {}
+[9.095868] (-) TimerEvent: {}
+[9.196435] (-) TimerEvent: {}
+[9.296943] (-) TimerEvent: {}
+[9.398898] (-) TimerEvent: {}
+[9.501901] (-) TimerEvent: {}
+[9.604900] (-) TimerEvent: {}
+[9.708746] (-) TimerEvent: {}
+[9.815518] (-) TimerEvent: {}
+[9.918999] (-) TimerEvent: {}
+[10.019528] (-) TimerEvent: {}
+[10.120188] (-) TimerEvent: {}
+[10.220649] (-) TimerEvent: {}
+[10.321177] (-) TimerEvent: {}
+[10.421681] (-) TimerEvent: {}
+[10.522234] (-) TimerEvent: {}
+[10.623316] (-) TimerEvent: {}
+[10.723821] (-) TimerEvent: {}
+[10.824297] (-) TimerEvent: {}
+[10.924791] (-) TimerEvent: {}
+[11.025299] (-) TimerEvent: {}
+[11.125797] (-) TimerEvent: {}
+[11.226317] (-) TimerEvent: {}
+[11.326816] (-) TimerEvent: {}
+[11.427304] (-) TimerEvent: {}
+[11.528135] (-) TimerEvent: {}
+[11.628731] (-) TimerEvent: {}
+[11.730903] (-) TimerEvent: {}
+[11.831421] (-) TimerEvent: {}
+[11.931928] (-) TimerEvent: {}
+[12.033395] (-) TimerEvent: {}
+[12.133880] (-) TimerEvent: {}
+[12.234363] (-) TimerEvent: {}
+[12.338901] (-) TimerEvent: {}
+[12.439394] (-) TimerEvent: {}
+[12.539890] (-) TimerEvent: {}
+[12.640351] (-) TimerEvent: {}
+[12.742327] (-) TimerEvent: {}
+[12.842834] (-) TimerEvent: {}
+[12.943281] (-) TimerEvent: {}
+[13.043666] (-) TimerEvent: {}
+[13.144068] (-) TimerEvent: {}
+[13.244449] (-) TimerEvent: {}
+[13.344844] (-) TimerEvent: {}
+[13.445231] (-) TimerEvent: {}
+[13.545622] (-) TimerEvent: {}
+[13.646036] (-) TimerEvent: {}
+[13.746425] (-) TimerEvent: {}
+[13.846855] (-) TimerEvent: {}
+[13.947247] (-) TimerEvent: {}
+[14.047633] (-) TimerEvent: {}
+[14.148041] (-) TimerEvent: {}
+[14.248412] (-) TimerEvent: {}
+[14.348858] (-) TimerEvent: {}
+[14.449269] (-) TimerEvent: {}
+[14.549652] (-) TimerEvent: {}
+[14.650053] (-) TimerEvent: {}
+[14.750429] (-) TimerEvent: {}
+[14.850832] (-) TimerEvent: {}
+[14.951260] (-) TimerEvent: {}
+[15.051739] (-) TimerEvent: {}
+[15.152187] (-) TimerEvent: {}
+[15.252603] (-) TimerEvent: {}
+[15.353032] (-) TimerEvent: {}
+[15.453439] (-) TimerEvent: {}
+[15.553869] (-) TimerEvent: {}
+[15.654262] (-) TimerEvent: {}
+[15.754720] (-) TimerEvent: {}
+[15.855142] (-) TimerEvent: {}
+[15.955533] (-) TimerEvent: {}
+[16.055907] (-) TimerEvent: {}
+[16.156293] (-) TimerEvent: {}
+[16.256689] (-) TimerEvent: {}
+[16.357084] (-) TimerEvent: {}
+[16.457450] (-) TimerEvent: {}
+[16.557858] (-) TimerEvent: {}
+[16.658249] (-) TimerEvent: {}
+[16.758679] (-) TimerEvent: {}
+[16.859146] (-) TimerEvent: {}
+[16.959544] (-) TimerEvent: {}
+[17.059913] (-) TimerEvent: {}
+[17.160350] (-) TimerEvent: {}
+[17.260828] (-) TimerEvent: {}
+[17.361228] (-) TimerEvent: {}
+[17.461681] (-) TimerEvent: {}
+[17.562129] (-) TimerEvent: {}
+[17.662575] (-) TimerEvent: {}
+[17.763012] (-) TimerEvent: {}
+[17.863439] (-) TimerEvent: {}
+[17.963888] (-) TimerEvent: {}
+[18.064342] (-) TimerEvent: {}
+[18.164775] (-) TimerEvent: {}
+[18.265219] (-) TimerEvent: {}
+[18.365657] (-) TimerEvent: {}
+[18.466122] (-) TimerEvent: {}
+[18.566551] (-) TimerEvent: {}
+[18.666985] (-) TimerEvent: {}
+[18.767430] (-) TimerEvent: {}
+[18.867904] (-) TimerEvent: {}
+[18.968344] (-) TimerEvent: {}
+[19.068826] (-) TimerEvent: {}
+[19.169263] (-) TimerEvent: {}
+[19.269703] (-) TimerEvent: {}
+[19.370199] (-) TimerEvent: {}
+[19.470619] (-) TimerEvent: {}
+[19.571082] (-) TimerEvent: {}
+[19.671525] (-) TimerEvent: {}
+[19.771983] (-) TimerEvent: {}
+[19.872396] (-) TimerEvent: {}
+[19.972902] (-) TimerEvent: {}
+[20.073319] (-) TimerEvent: {}
+[20.173779] (-) TimerEvent: {}
+[20.274344] (-) TimerEvent: {}
+[20.374763] (-) TimerEvent: {}
+[20.475208] (-) TimerEvent: {}
+[20.575704] (-) TimerEvent: {}
+[20.676145] (-) TimerEvent: {}
+[20.776538] (-) TimerEvent: {}
+[20.876913] (-) TimerEvent: {}
+[20.977283] (-) TimerEvent: {}
+[21.077658] (-) TimerEvent: {}
+[21.178033] (-) TimerEvent: {}
+[21.278404] (-) TimerEvent: {}
+[21.378799] (-) TimerEvent: {}
+[21.479199] (-) TimerEvent: {}
+[21.579599] (-) TimerEvent: {}
+[21.679987] (-) TimerEvent: {}
+[21.780368] (-) TimerEvent: {}
+[21.880751] (-) TimerEvent: {}
+[21.981157] (-) TimerEvent: {}
+[22.081511] (-) TimerEvent: {}
+[22.181894] (-) TimerEvent: {}
+[22.282255] (-) TimerEvent: {}
+[22.382640] (-) TimerEvent: {}
+[22.483026] (-) TimerEvent: {}
+[22.583399] (-) TimerEvent: {}
+[22.683767] (-) TimerEvent: {}
+[22.784208] (-) TimerEvent: {}
+[22.884589] (-) TimerEvent: {}
+[22.985011] (-) TimerEvent: {}
+[23.085381] (-) TimerEvent: {}
+[23.185848] (-) TimerEvent: {}
+[23.286215] (-) TimerEvent: {}
+[23.386631] (-) TimerEvent: {}
+[23.487060] (-) TimerEvent: {}
+[23.587530] (-) TimerEvent: {}
+[23.687904] (-) TimerEvent: {}
+[23.788277] (-) TimerEvent: {}
+[23.888677] (-) TimerEvent: {}
+[23.989330] (-) TimerEvent: {}
+[24.089771] (-) TimerEvent: {}
+[24.190293] (-) TimerEvent: {}
+[24.290722] (-) TimerEvent: {}
+[24.391186] (-) TimerEvent: {}
+[24.491612] (-) TimerEvent: {}
+[24.592046] (-) TimerEvent: {}
+[24.692471] (-) TimerEvent: {}
+[24.792894] (-) TimerEvent: {}
+[24.893323] (-) TimerEvent: {}
+[24.993746] (-) TimerEvent: {}
+[25.094187] (-) TimerEvent: {}
+[25.194611] (-) TimerEvent: {}
+[25.295046] (-) TimerEvent: {}
+[25.395472] (-) TimerEvent: {}
+[25.495892] (-) TimerEvent: {}
+[25.596316] (-) TimerEvent: {}
+[25.696740] (-) TimerEvent: {}
+[25.797181] (-) TimerEvent: {}
+[25.897596] (-) TimerEvent: {}
+[25.998013] (-) TimerEvent: {}
+[26.098446] (-) TimerEvent: {}
+[26.198947] (-) TimerEvent: {}
+[26.299578] (-) TimerEvent: {}
+[26.400070] (-) TimerEvent: {}
+[26.500589] (-) TimerEvent: {}
+[26.601011] (-) TimerEvent: {}
+[26.701396] (-) TimerEvent: {}
+[26.801796] (-) TimerEvent: {}
+[26.902282] (-) TimerEvent: {}
+[27.002671] (-) TimerEvent: {}
+[27.103154] (-) TimerEvent: {}
+[27.203576] (-) TimerEvent: {}
+[27.304010] (-) TimerEvent: {}
+[27.404474] (-) TimerEvent: {}
+[27.504893] (-) TimerEvent: {}
+[27.605316] (-) TimerEvent: {}
+[27.705736] (-) TimerEvent: {}
+[27.806174] (-) TimerEvent: {}
+[27.906609] (-) TimerEvent: {}
+[27.956467] (agv_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable main_node\x1b[0m\n'}
+[28.006764] (-) TimerEvent: {}
+[28.107230] (-) TimerEvent: {}
+[28.207739] (-) TimerEvent: {}
+[28.308555] (-) TimerEvent: {}
+[28.409069] (-) TimerEvent: {}
+[28.509550] (-) TimerEvent: {}
+[28.610041] (-) TimerEvent: {}
+[28.710460] (-) TimerEvent: {}
+[28.810884] (-) TimerEvent: {}
+[28.911306] (-) TimerEvent: {}
+[29.011726] (-) TimerEvent: {}
+[29.112210] (-) TimerEvent: {}
+[29.212745] (-) TimerEvent: {}
+[29.313177] (-) TimerEvent: {}
+[29.387313] (agv_cpp) StdoutLine: {'line': b'[100%] Built target main_node\n'}
+[29.405279] (agv_cpp) CommandEnded: {'returncode': 0}
+[29.413304] (-) TimerEvent: {}
+[29.454134] (agv_cpp) JobProgress: {'identifier': 'agv_cpp', 'progress': 'install'}
+[29.455623] (agv_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/melih/Desktop/AGV/build/agv_cpp'], 'cwd': '/home/melih/Desktop/AGV/build/agv_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'melih'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces/lib:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/lib:/home/melih/Desktop/ros_action/install/robot_action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/melih'), ('OLDPWD', '/home/melih/Desktop/AGV/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1246'), ('SYSTEMD_EXEC_PID', '1413'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2725'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/melih/Desktop/New_Folder_1/install:/home/melih/Desktop/ros_lifecycle_node/install:/home/melih/Desktop/ros_example/turtlesim_project/install:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install:/home/melih/Desktop/ros_example/battery_led_states/install:/home/melih/Desktop/ros_msgs/install:/home/melih/Desktop/ros_cpp2/install:/home/melih/Desktop/ros_py/install:/home/melih/Desktop/AGV/install:/home/melih/Desktop/ros_ws/install:/home/melih/Desktop/ros_action/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'melih'), ('JOURNAL_STREAM', '8:13365'), ('_', '/home/melih/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'melih'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/melih/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/melih-ideapad:@/tmp/.ICE-unix/1386,unix/melih-ideapad:/tmp/.ICE-unix/1386'), ('INVOCATION_ID', '96760d6e75ce4e6d8b51c10b866c4b1c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.612QT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:3d477764-d962-41e1-a97e-6536cf39f878'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/melih/Desktop/AGV/build/agv_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/battery_led_states/install/package_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_py/install/my_robot/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/actions_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/robot_action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/opt/ros/humble')]), 'shell': False}
+[29.468955] (agv_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.469506] (agv_cpp) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_cpp/lib/agv_cpp/main_node\n'}
+[29.485159] (agv_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/melih/Desktop/AGV/install/agv_cpp/lib/agv_cpp/main_node" to ""\n'}
+[29.485653] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/ament_index/resource_index/package_run_dependencies/agv_cpp\n'}
+[29.485965] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/ament_index/resource_index/parent_prefix_path/agv_cpp\n'}
+[29.486292] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/environment/ament_prefix_path.sh\n'}
+[29.486495] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/environment/ament_prefix_path.dsv\n'}
+[29.486798] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/environment/path.sh\n'}
+[29.487012] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/environment/path.dsv\n'}
+[29.487168] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/local_setup.bash\n'}
+[29.487296] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/local_setup.sh\n'}
+[29.487417] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/local_setup.zsh\n'}
+[29.487535] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/local_setup.dsv\n'}
+[29.487655] (agv_cpp) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/package.dsv\n'}
+[29.487773] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/ament_index/resource_index/packages/agv_cpp\n'}
+[29.487927] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/cmake/agv_cppConfig.cmake\n'}
+[29.488048] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/cmake/agv_cppConfig-version.cmake\n'}
+[29.488186] (agv_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_cpp/share/agv_cpp/package.xml\n'}
+[29.490970] (agv_cpp) CommandEnded: {'returncode': 0}
+[29.513442] (-) TimerEvent: {}
+[29.568045] (agv_cpp) JobEnded: {'identifier': 'agv_cpp', 'rc': 0}
+[29.571123] (agv_launch) JobStarted: {'identifier': 'agv_launch'}
+[29.604407] (agv_launch) JobProgress: {'identifier': 'agv_launch', 'progress': 'cmake'}
+[29.606515] (agv_launch) JobProgress: {'identifier': 'agv_launch', 'progress': 'build'}
+[29.607312] (agv_launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/melih/Desktop/AGV/build/agv_launch', '--', '-j4', '-l4'], 'cwd': '/home/melih/Desktop/AGV/build/agv_launch', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'melih'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces/lib:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/lib:/home/melih/Desktop/ros_action/install/robot_action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/melih'), ('OLDPWD', '/home/melih/Desktop/AGV/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1246'), ('SYSTEMD_EXEC_PID', '1413'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2725'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/melih/Desktop/New_Folder_1/install:/home/melih/Desktop/ros_lifecycle_node/install:/home/melih/Desktop/ros_example/turtlesim_project/install:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install:/home/melih/Desktop/ros_example/battery_led_states/install:/home/melih/Desktop/ros_msgs/install:/home/melih/Desktop/ros_cpp2/install:/home/melih/Desktop/ros_py/install:/home/melih/Desktop/AGV/install:/home/melih/Desktop/ros_ws/install:/home/melih/Desktop/ros_action/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'melih'), ('JOURNAL_STREAM', '8:13365'), ('_', '/home/melih/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'melih'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/melih/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/melih-ideapad:@/tmp/.ICE-unix/1386,unix/melih-ideapad:/tmp/.ICE-unix/1386'), ('INVOCATION_ID', '96760d6e75ce4e6d8b51c10b866c4b1c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.612QT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:3d477764-d962-41e1-a97e-6536cf39f878'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/melih/Desktop/AGV/build/agv_launch'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/battery_led_states/install/package_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_py/install/my_robot/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/actions_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/robot_action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/opt/ros/humble')]), 'shell': False}
+[29.613634] (-) TimerEvent: {}
+[29.674997] (agv_launch) CommandEnded: {'returncode': 0}
+[29.714167] (-) TimerEvent: {}
+[29.727514] (agv_launch) JobProgress: {'identifier': 'agv_launch', 'progress': 'install'}
+[29.727965] (agv_launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/melih/Desktop/AGV/build/agv_launch'], 'cwd': '/home/melih/Desktop/AGV/build/agv_launch', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'melih'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/melih/Desktop/AGV/install/agv_interfaces/lib:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/lib:/home/melih/Desktop/ros_action/install/robot_action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/melih'), ('OLDPWD', '/home/melih/Desktop/AGV/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1246'), ('SYSTEMD_EXEC_PID', '1413'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2725'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/melih/Desktop/New_Folder_1/install:/home/melih/Desktop/ros_lifecycle_node/install:/home/melih/Desktop/ros_example/turtlesim_project/install:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install:/home/melih/Desktop/ros_example/battery_led_states/install:/home/melih/Desktop/ros_msgs/install:/home/melih/Desktop/ros_cpp2/install:/home/melih/Desktop/ros_py/install:/home/melih/Desktop/AGV/install:/home/melih/Desktop/ros_ws/install:/home/melih/Desktop/ros_action/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'melih'), ('JOURNAL_STREAM', '8:13365'), ('_', '/home/melih/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'melih'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/melih/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/melih-ideapad:@/tmp/.ICE-unix/1386,unix/melih-ideapad:/tmp/.ICE-unix/1386'), ('INVOCATION_ID', '96760d6e75ce4e6d8b51c10b866c4b1c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.612QT2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:3d477764-d962-41e1-a97e-6536cf39f878'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/melih/Desktop/AGV/build/agv_launch'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/melih/Desktop/AGV/install/agv_py/lib/python3.10/site-packages:/home/melih/Desktop/AGV/install/agv_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/melih/Desktop/ros_example/battery_led_states/install/package_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/home/melih/Desktop/ros_py/install/my_robot/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/actions_py/lib/python3.10/site-packages:/home/melih/Desktop/ros_action/install/robot_action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/melih/Desktop/AGV/install/agv_cpp:/home/melih/Desktop/AGV/install/agv_interfaces:/home/melih/Desktop/AGV/install/agv_launch:/home/melih/Desktop/New_Folder_1/install/ydlidar_ros2_driver:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_cpp:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_launch_bringup:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all_launch_bringup:/home/melih/Desktop/ros_example/battery_led_states/install/package_cpp:/home/melih/Desktop/ros_msgs/install/my_robot_interfaces:/home/melih/Desktop/ros_cpp2/install/rdr2:/home/melih/Desktop/ros_py/install/my_robot_bringup:/home/melih/Desktop/ros_action/install/actions_cpp:/home/melih/Desktop/ros_action/install/robot_action_interfaces:/home/melih/Desktop/AGV/install/agv_py:/home/melih/Desktop/ros_lifecycle_node/install/lifecycle_node_py:/home/melih/Desktop/ros_example/turtlesim_project/install/turtlesim_py:/home/melih/Desktop/ros_example/edouard_turtlesim_project/install/turtlesim_catch_them_all:/home/melih/Desktop/ros_example/battery_led_states/install/package_py:/home/melih/Desktop/ros_py/install/my_robot:/home/melih/Desktop/ros_action/install/actions_py:/opt/ros/humble')]), 'shell': False}
+[29.745361] (agv_launch) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.747890] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/launch\n'}
+[29.748356] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/launch/agv_app.launch.py\n'}
+[29.748726] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/launch/mapping_app.launch.py\n'}
+[29.749784] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/ament_index/resource_index/package_run_dependencies/agv_launch\n'}
+[29.750061] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/ament_index/resource_index/parent_prefix_path/agv_launch\n'}
+[29.750251] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/environment/ament_prefix_path.sh\n'}
+[29.750427] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/environment/ament_prefix_path.dsv\n'}
+[29.750601] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/environment/path.sh\n'}
+[29.750769] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/environment/path.dsv\n'}
+[29.750966] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/local_setup.bash\n'}
+[29.751140] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/local_setup.sh\n'}
+[29.751317] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/local_setup.zsh\n'}
+[29.751483] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/local_setup.dsv\n'}
+[29.751671] (agv_launch) StdoutLine: {'line': b'-- Installing: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/package.dsv\n'}
+[29.752037] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/ament_index/resource_index/packages/agv_launch\n'}
+[29.752244] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/cmake/agv_launchConfig.cmake\n'}
+[29.752416] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/cmake/agv_launchConfig-version.cmake\n'}
+[29.752586] (agv_launch) StdoutLine: {'line': b'-- Up-to-date: /home/melih/Desktop/AGV/install/agv_launch/share/agv_launch/package.xml\n'}
+[29.754980] (agv_launch) CommandEnded: {'returncode': 0}
+[29.814211] (-) TimerEvent: {}
+[29.829613] (agv_launch) JobEnded: {'identifier': 'agv_launch', 'rc': 0}
+[29.831321] (-) EventReactorShutdown: {}
